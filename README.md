@@ -41,7 +41,7 @@ For Software:
 Run index.html or open it in the browser.
 
 
-# Screenshots (Add at least 3)
+# Screenshots
 Initial prompt asking if the user needs to know the time.
 ![Screenshot 1](./assets/screenshot1.png)
 
