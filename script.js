@@ -1,27 +1,41 @@
 document.getElementById("yes-button").addEventListener("click", handleYes);
 document.getElementById("no-button").addEventListener("click", handleNo);
 
-let clockInterval; // Variable to hold the clock interval
-
 function handleYes() {
-    document.getElementById("prompt-frame").classList.add("hidden");
-    document.getElementById("main-frame").classList.remove("hidden");
-    showClock();
+    alert("Why don't you just look at your device?");
 }
 
 function handleNo() {
-    alert("Ok then, why are you here? GET LOST!");
-    window.close(); // Attempt to close the window (works in some browsers)
+    document.getElementById("prompt-frame").classList.add("hidden");
+    document.getElementById("main-frame").classList.remove("hidden");
+    showPopup();
+}
+
+function showPopup() {
+    const popup = document.createElement("div");
+    popup.id = "popup";
+    popup.innerHTML = `
+        <p style="font-size: 24px; color: #dc3545; font-weight: bold; margin-bottom: 20px;">
+            You should really check the time!
+        </p>
+        <button id="close-popup" class="btn success">OKKKKK!</button>
+    `;
+    document.body.appendChild(popup);
+
+    document.getElementById("close-popup").addEventListener("click", () => {
+        document.body.removeChild(popup);
+        showClock();
+    });
 }
 
 function showClock() {
     const clockLabel = document.getElementById("clock-label");
-    clockInterval = setInterval(() => {
+    clockLabel.classList.remove('hidden');
+    setInterval(() => {
         const currentTime = new Date().toLocaleTimeString();
         clockLabel.textContent = currentTime;
 
         // Fun animations
-        clockLabel.classList.remove('hidden');
         clockLabel.style.opacity = 0; // Start hidden
         clockLabel.style.transform = 'scale(0)'; // Start small
 
