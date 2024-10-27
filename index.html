@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Crazy Clock</title>
+</head>
+<body>
+    <div id="app">
+        <div id="prompt-frame" class="frame">
+            <h1>Do you need to know the TIME?</h1>
+            <div class="button-container">
+                <button id="yes-button" class="btn success">Yes</button>
+                <button id="no-button" class="btn danger">No</button>
+            </div>
+        </div>
+
+        <div id="main-frame" class="frame hidden">
+            <h2 class="question">Welcome to the Crazy Clock!</h2>
+            <div id="clock-label" class="clock hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
