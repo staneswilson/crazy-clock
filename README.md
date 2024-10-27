@@ -30,7 +30,7 @@ For Software:
 # Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/ethoxi/crazy-clock.git
+   git clone https://github.com/staneswilson/crazy-clock.git
    ```
 2. Navigate to the project directory:
    ```sh
